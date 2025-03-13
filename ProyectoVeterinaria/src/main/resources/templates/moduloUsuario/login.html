@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion</title>
+    <link rel="stylesheet" href="/css/estilosLogin.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Iniciar sesion</h2>
+    <form th:action="@{/login}" method="post">
+        <div>
+            <label for="nombreUsuario">Nombre de usuario:</label>
+            <input type="text" id="nombreUsuario" name="nombreUsuario" class="input-field" required />
+        </div>
+        <div>
+            <label for="contrasenia">Contraseña:</label>
+            <input type="contrasenia" id="contrasenia" name="contrasenia" class="input-field" required />
+        </div>
+
+        <!-- Display error message (if any) -->
+        <div th:if="${error}" class="error-message">
+            ¡Usuario o contraseña invalidos!
+        </div>
+
+        <button type="submit" class="btn">Iniciar sesion</button>
+    </form>
+</div>
+
+</body>
+</html>

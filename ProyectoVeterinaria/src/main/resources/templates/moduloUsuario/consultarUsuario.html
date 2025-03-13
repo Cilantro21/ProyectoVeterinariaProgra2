@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta usuarios</title>
+</head>
+<body>
+
+<h1>Lista usuarios</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id usuario</th>
+            <th>Nombre</th>
+            <th>Nombre de usuario</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario.id}"></td>
+            <td th:text="${usuario.nombre}"></td>
+            <td th:text="${usuario.nombreUsuario}"></td>
+            <td th:text="${usuario.estado}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

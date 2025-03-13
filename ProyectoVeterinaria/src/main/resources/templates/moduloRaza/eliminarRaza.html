@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar raza</title>
+</head>
+<body>
+
+<h1>Eliminar raza</h1>
+
+<form th:action="@{/menuRaza/eliminar}" method="post">
+    <label for="Id">Ingrese el ID de la raza a eliminar:</label>
+    <input type="number" id="Id" name="Id" required>
+    <button type="submit">Eliminar</button>
+</form>
+
+<div th:if="${message != null}">
+    <p th:text="${message}"></p>
+</div>
+
+<div th:if="${error != null}">
+    <p th:text="${error}"></p>
+</div>
+
+</body>
+</html>

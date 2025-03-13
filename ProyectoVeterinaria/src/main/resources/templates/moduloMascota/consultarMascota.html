@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consula Mascotas</title>
+</head>
+<body>
+
+<h1>Lista mascotas</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id mascota</th>
+            <th>Nombre</th>
+            <th>Raza</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="mascota : ${mascotas}">
+            <td th:text="${mascota.id}"></td>
+            <td th:text="${mascota.nombre}"></td>
+            <td th:text="${mascota.raza}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
