@@ -6,16 +6,21 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "roles")
-public class rolesEntity {
+@Table(name = "ROLES")
+public class Roles {
 
     @Id
     private Integer id;
 
     @Size(max = 10)
-    private String nombreRol;
+    private String nombre_rol;
 
-    public rolesEntity() {
+    public Roles() {
+    }
+
+    public Roles(Integer id, @Size(max = 10) String nombre_rol) {
+        this.id = id;
+        this.nombre_rol = nombre_rol;
     }
 
     public Integer getId() {
@@ -26,14 +31,14 @@ public class rolesEntity {
         this.id = id;
     }
 
-    public String getNombreRol() {
-        return nombreRol;
+    public String getNombre_rol() {
+        return nombre_rol;
     }
 
-    public void setNombreRol(String nombreRol) {
-        this.nombreRol = nombreRol;
+    public void setNombre_rol(String nombre_rol) {
+        this.nombre_rol = nombre_rol;
     }
 
     
-
+   
 }

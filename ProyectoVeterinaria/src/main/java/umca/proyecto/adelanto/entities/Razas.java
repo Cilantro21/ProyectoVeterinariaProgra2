@@ -9,8 +9,8 @@ import jakarta.validation.constraints.Size;
 
 
 @Entity
-@Table(name = "razas", schema = "dbo")
-public class razaEntity {
+@Table(name = "RAZAS", schema = "dbo")
+public class Razas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,37 +19,34 @@ public class razaEntity {
     @Size(max = 30)
     private String nombre;
 
-    @Size(min = 10, max = 50)
-    private String datosAuditoria;
 
-    public razaEntity() {
+    public Razas() {
     }
+
+
+    public Razas(Integer id, @Size(max = 30) String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
 
     public Integer getId() {
         return id;
     }
 
+
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     public String getNombre() {
         return nombre;
     }
 
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public String getDatosAuditoria() {
-        return datosAuditoria;
-    }
-
-    public void setDatosAuditoria(String datosAuditoria) {
-        this.datosAuditoria = datosAuditoria;
-    }
-
     
-
-
 }

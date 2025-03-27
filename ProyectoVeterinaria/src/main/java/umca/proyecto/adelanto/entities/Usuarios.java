@@ -9,8 +9,8 @@ import jakarta.validation.constraints.Size;
 
 
 @Entity
-@Table(name = "usuarios")
-public class usuariosEntity {
+@Table(name = "USUARIOS")
+public class Usuarios {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,16 +23,24 @@ public class usuariosEntity {
     private String apellidos;
 
     @Size(max = 50)
-    private String nombreUsuario;
+    private String nombre_usuario;
 
     @Size(min = 12)
     private String contrasena;
   
     private boolean estado;
 
-    private String roles;
+    public Usuarios() {
+    }
 
-    public usuariosEntity() {
+    public Usuarios(Integer id, @Size(max = 50) String nombre, @Size(max = 50) String apellidos,
+            @Size(max = 50) String nombre_usuario, @Size(min = 12) String contrasena, boolean estado) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.nombre_usuario = nombre_usuario;
+        this.contrasena = contrasena;
+        this.estado = estado;
     }
 
     public Integer getId() {
@@ -59,12 +67,12 @@ public class usuariosEntity {
         this.apellidos = apellidos;
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
+    public String getNombre_usuario() {
+        return nombre_usuario;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
     }
 
     public String getContrasena() {
@@ -83,15 +91,5 @@ public class usuariosEntity {
         this.estado = estado;
     }
 
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
-
-
     
-
 }
