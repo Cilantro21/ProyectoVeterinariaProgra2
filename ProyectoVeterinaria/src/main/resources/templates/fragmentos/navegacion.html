@@ -1,0 +1,19 @@
+<div th:fragment="navegacion" class="d-block w-25 py-3">
+    <ul class="px-4" style="list-style: none;">
+        <li>
+            <a class="btn btn-lg btn-dark d-block mb-3 text-start" href="/webapp/panel/">
+                <img th:src="@{/images/vet.png}" height="35" alt="vete+icon" />
+                <span class="fw-bold text-uppercase">Vete+</span>
+            </a>
+        </li>
+        <li>
+            <a href="mascotas" class="btn btn-lg btn-dark d-block mb-3 text-start">Mascotas</a>
+        </li>
+        <li>
+            <a href="clientes" class="btn btn-lg btn-dark d-block mb-3 text-start">Clientes</a>
+        </li>
+        <li>
+            <a href="usuarios" class="btn btn-lg btn-dark d-block mb-3 text-start">Usuarios</a>
+        </li>
+    </ul>
+</div>
