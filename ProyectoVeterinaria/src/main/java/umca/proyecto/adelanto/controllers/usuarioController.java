@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.transaction.Transactional;
 import umca.proyecto.adelanto.entities.usuariosEntity;
+import umca.proyecto.adelanto.middlewares.autenticadorPaginas;
 import umca.proyecto.adelanto.repositories.usuariosRepository;
 
 @Controller
 public class usuarioController {
 
     @Autowired
-
     private usuariosRepository usuarioRepo;
 
     @GetMapping("/menuUsuario")
@@ -34,10 +34,16 @@ public class usuarioController {
     @PostMapping("/menuUsuario/registrar")
 
     public String salvarUsuario(usuariosEntity usuarios){
-
-        usuarioRepo.save(usuarios);
-
+        // autenticadorPaginas autenticador = new autenticadorPaginas();
+        // if(autenticador.autenticarAdministrador(usuarioRegistro)){
+        //     usuarioRepo.save(usuarios);
+        //     return "moduloUsuario/menuUsuario";
+        // }else{
+        //     modelo.addAttribute("error", "No tiene permisos para realizar esta acción.");
+        //     return "moduloUsuario/menuUsuario";
+        // }
         return "moduloUsuario/menuUsuario";
+        
     }
 
     @GetMapping("/menuUsuario/consultar")

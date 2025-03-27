@@ -1,0 +1,29 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap');
+
+    * {
+        font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    main{
+        padding: 0 16px;
+    }
+</style>
+<div th:fragment="cabecera" class="p-2 border-bottom" style="background-color: #F88379;">
+    <div class="d-flex container-fluid text-light justify-content-between">
+        <div class="navbar-header my-auto">
+            <a class="navbar-brand fw-bold" href="/webapp/">
+                <img th:src="@{/images/vet.png}" height="30" alt="vete+icon" />
+                <span class="fw-bold text-uppercase">Vete+</span>
+            </a>
+        </div>
+        <div class="">
+            <a href="/webapp/panel/ingresar" class="btn btn-sm text-light w-full" style="background-color: #FC6C85;">
+                <i class="fa-solid fa-angle-right"></i>
+                <span class="fw-bold">Ingresar</span>
+            </a>
+        </div>
+    </div>
+</div>
