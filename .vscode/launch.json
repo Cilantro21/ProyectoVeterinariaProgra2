@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SemanaseisApplication<adelanto>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "umca.proyecto.adelanto.SemanaseisApplication",
+            "projectName": "adelanto",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
